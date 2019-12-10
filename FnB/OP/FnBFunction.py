@@ -3,12 +3,6 @@
 
 # In[14]:
 
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-
 def compare(FnB_A,FnB_B): #show a bar plot with the revenues of FnB business
     try:
         profitrateA = FnB_A.revenue/FnB_A.area
