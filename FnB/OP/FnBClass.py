@@ -2,24 +2,14 @@
 # coding: utf-8
 
 # In[24]:
-class ZeroStaff(Exception):
-    pass
-
 
 
 class FnB:
     def __init__(self,address, area, revenue, staffnum):
-        try:
-            if staffnum < 1:
-                raise(ZeroStaff())
-            self.address  = address
-            self.area     = area
-            self.revenue  = revenue
-            self.staffnum = staffnum
-        except ZeroStaff:
-            print("The number of staffs is invalid")
-        else:
-            print("Succesfull")            
+        self.address  = address
+        self.area     = area
+        self.revenue  = revenue
+        self.staffnum = staffnum
     def info(self):
         print("Address: ", self.address, "Area: ", self.area, "Revenue: ", self.revenue, "Number of staff: ", self.staffnum)
         
