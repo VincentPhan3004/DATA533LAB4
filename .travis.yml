@@ -1,5 +1,8 @@
 language: python
 python:
-- "3.7.3"
+  - "3.8"
+# command to run tests
+install:
+  - pip install -r requirments.txt
 script:
 - python PackageTestSuite.py
