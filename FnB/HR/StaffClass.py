@@ -15,7 +15,7 @@ class Staff:
             now = datetime.datetime.now()
             if entry_year > now.year:
                 raise(InitError1())
-            if last_promotion_year > entry_year:
+            if last_promotion_year < entry_year:
                 raise(InitError2())
             self.ID = ID
             self.name=name
@@ -28,7 +28,7 @@ class Staff:
         except InitError1:
             print("The entry_year can not exceed current year")
         except InitError2:
-            print("The entry_year can not lower than last_promotion_year")      
+            print("The entry_year or last_promotion_year is invalide")      
     def info(self):
         print("ID: ", self.ID)
         print("Name: ", self.name)
